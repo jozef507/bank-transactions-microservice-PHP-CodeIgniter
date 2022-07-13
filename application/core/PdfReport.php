@@ -363,12 +363,12 @@ class PdfReport
         $mail->SMTPSecure = "tls";
         $mail->Port       = 587;
         $mail->Host       = "smtp.gmail.com";
-        $mail->Username   = "pis2021banka@gmail.com";
-        $mail->Password   = "Pis2021banka+";
+        $mail->Username   = "example@example.com";
+        $mail->Password   = "example";
 
-        $mail->setFrom('jozef507@gmail.com', 'Pis2021 Banka');
+        $mail->setFrom('example@example.com', 'Pis2021 Banka');
         $mail->addAddress($this->ownerInfo['email']);
-        $mail->addReplyTo('jozef507@gmail.com', 'Pis2021 Banka');
+        $mail->addReplyTo('example@example.com', 'Pis2021 Banka');
 
         $mail->AddStringAttachment($file, 'rep_'.$this->accountInfo['iban'].'_'.$this->year.'_'.$this->month.'.pdf', 'base64', 'application/pdf');
 
